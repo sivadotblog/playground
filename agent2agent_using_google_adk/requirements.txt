@@ -1,0 +1,12 @@
+# Core dependencies
+google-genai>=0.2.0
+litellm>=1.0.0
+httpx>=0.25.0
+python-dotenv>=1.0.0
+google-adk
+# Utility
+pydantic>=2.0.0
+nemoguardrails
+nemoguardrails[openai]
+transformers 
+torch

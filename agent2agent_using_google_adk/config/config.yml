@@ -1,0 +1,25 @@
+models:
+  - type: main
+    engine: openai
+    model: gpt-3.5-turbo-instruct
+  - type: content_safety
+    engine: openai
+    model: gpt-3.5-turbo-instruct
+rails:
+  input:
+    flows:
+      - topic safety check input $model=content_safety
+      - content safety check input $model=content_safety
+      - jailbreak detection heuristics $model=content_safety
+  output:
+    flows:
+      - content safety check output $model=content_safety
+    streaming:
+      enabled: True
+      chunk_size: 200
+      context_size: 50
+  config:
+    jailbreak_detection:
+      length_per_perplexity_threshold: 89.79
+      prefix_suffix_perplexity_threshold: 1845.65
+streaming: True
