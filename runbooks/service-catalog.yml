@@ -1,0 +1,20 @@
+# Source of truth for services. Every directory under docs/ must match a name here.
+services:
+  - name: databricks
+    display_name: Databricks
+    description: Lakehouse compute and workspace platform
+    owner: data-platform-engineering
+    tier: 1
+    oncall: "#data-platform-oncall"
+    dashboards:
+      - TODO: link
+    alerts_dir: docs/databricks/alerts
+  - name: prefect
+    display_name: Prefect
+    description: Workflow orchestration for data pipelines
+    owner: data-platform-engineering
+    tier: 2
+    oncall: "#data-platform-oncall"
+    dashboards:
+      - TODO: link
+    alerts_dir: docs/prefect/alerts
